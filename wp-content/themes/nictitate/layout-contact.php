@@ -74,8 +74,8 @@ get_header(); ?>
                                     <address>
                                     
                                         <p><i class="fa fa-book"></i><span>KvKnr: 50581139</span></p>
-                                        <p><i class="fa fa-map-marker"></i><span>Remmerstein 13</span></p>
-                                        <p class="address-block"><i></i><span>3328 BL</span> <br/>
+                                        <p><i class="fa fa-map-marker"></i><span>Fuutstraat 22</span></p>
+                                        <p class="address-block"><i></i><span>3312 RJ</span> <br/>
                                         <i></i><span>Dordrecht</span> <br/>
                                         <i></i><span>Nederland</span></p>
 

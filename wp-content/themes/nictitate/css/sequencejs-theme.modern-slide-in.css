@@ -243,7 +243,7 @@ Aside from these comments, you may modify and distribute this file as you please
 	color: #fff;
 	font-family:'Rokkitt', serif;
 	padding:5px 15px 3px;
-	font-size:30px;
+	font-size:40px;
 	display:inline-block;
 	text-transform: uppercase;
 	background-color:#800080;
@@ -303,7 +303,7 @@ Aside from these comments, you may modify and distribute this file as you please
 
 #sequence li p {
 	color: #fff;
-	font-size: 13px;
+	font-size: 23px;
 }
 #sequence li#intro p {
 	margin:20px 0 0;
@@ -499,7 +499,7 @@ Aside from these comments, you may modify and distribute this file as you please
 	width: 40%;
 	left: -15%;
 	opacity: 0;
-	top: 25%;	
+	top: 10%;	
 	position:absolute;
 }
 
@@ -529,13 +529,13 @@ Aside from these comments, you may modify and distribute this file as you please
 	left: -15%;
 	width: 31%;
 	opacity: 0;
-	top: 40%;
+	top: 30%;
 	position:absolute;
 }
 #sequence li .subtitle-2 p {
 	color:#666;
-	background-color:rgba(255,255,255,.78);
-	padding:10px 15px;
+	background-color:rgba(255,255,255,.50);
+	padding: 30px 24px 10px;
 }
 
 .animate-in .subtitle-2 {

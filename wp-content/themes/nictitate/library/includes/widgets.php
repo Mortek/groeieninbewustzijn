@@ -1437,6 +1437,7 @@ class Kopa_Widget_Testimonials extends WP_Widget {
                 </ul><!--kopa-latest-work-carousel-->
                 <div class="clearfix"></div>
                 <div class="carousel-nav clearfix">
+                <span class="more-reviews-text">Meer recensies</span>
                     <a id="<?php echo $this->get_field_id('prev-2'); ?>" class="carousel-prev" href="#">&lt;</a>
                     <a id="<?php echo $this->get_field_id('next-2'); ?>" class="carousel-next" href="#">&gt;</a>
                 </div>
@@ -2260,7 +2261,7 @@ class Kopa_Widget_Portfolios extends WP_Widget {
                 <img src="<?php echo $thumbnail[0]; ?>" alt="<?php the_title(); ?>">
                 <p>
                     <a class="link-gallery" href="<?php echo $full_thumbnail[0]; ?>" rel="prettyPhoto[<?php echo $this->get_field_id( 'gallery' ); ?>]"><?php the_title(); ?></a>
-                    <a class="link-detail" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <!-- <a class="link-detail" href="<?php the_permalink(); ?>"><?php the_title(); ?></a> -->
                 </p>
               </div>
             </li>
