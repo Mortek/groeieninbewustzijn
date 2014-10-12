@@ -1,44 +1,4 @@
 <!DOCTYPE html>
-<?php 
-if(isset($_POST['newsletter_submit'])) 
-{ 
-    $email = $_POST['email'];
-    $to = 'mauricemoret1991@gmail.com';
-    $subject = 'Inschrijving op de nieuwsbrief';
-    $body = "
-                Er is een nieuwe aanmelding op de nieuwsbrief van www.groeieninbewustzijn.nl: <b> $email </b>
-            ";
-
-    mail($to, $subject, $body);
-}
-if(isset($_POST['contact_submit'])) 
-{ 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    $to = 'mauricemoret1991@gmail.com';
-
-    if ($_POST['subject']) {
-        $subject = $_POST['subject'];
-    }
-    else {
-        $subject = 'Reactie op het contactformulier';
-    }
-    
-    $body = "
-                Er is een nieuwe reactie op het contactformilier: <br/><br/>
-
-                <b>Naam:</b> $name <br/>
-                <b>Onderwerp:</b> $subject <br/>
-                <b>Email:</b> $email <br/>
-                <b>Bericht:</b><br/> $message
-            ";
-
-    mail($to, $subject, $body);
-}
-
-?>
 <html <?php language_attributes(); ?>>              
     <head>
         <meta charset="<?php bloginfo('charset'); ?>" />                   

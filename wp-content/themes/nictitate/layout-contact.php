@@ -15,8 +15,43 @@ $vimeo = get_option( 'kopa_theme_options_social_links_vimeo_url' );
 $youtube = get_option( 'kopa_theme_options_social_links_youtube_url' );
 $instagram = get_option( 'kopa_theme_options_social_links_instagram_url' );
 
+get_header(); 
 
-get_header(); ?>
+if(isset($_POST['contact_submit'])) 
+{ 
+    if (empty($_POST['name']) && empty($_POST['email']) && empty($_POST['message'])) {
+        $form_message = 'Vul alle verplichten velden in a.u.b.';
+    }
+    else {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+
+        $to = 'mauricemoret1991@gmail.com';
+
+        if ($_POST['subject']) {
+            $subject = $_POST['subject'];
+        }
+        else {
+            $subject = 'Reactie op het contactformulier';
+        }
+
+        $body = "Er is een nieuwe reactie op het contactformilier: <br/><br/>
+
+                <b>Naam:</b> $name <br/>
+                <b>Onderwerp:</b> $subject <br/>
+                <b>Email:</b> $email <br/>
+                <b>Bericht:</b><br/> $message
+                ";
+
+        $form_message = 'Bedankt voor uw bericht. Ik zal zo spoedig mogelijk contact met u opnemen.';
+
+        mail($to, $subject, $body);
+    }
+    
+}
+
+?>
 
 <div id="main-content">
                         
@@ -58,6 +93,12 @@ get_header(); ?>
                                 <div class="clear"></div>                        
                             </form>
                             <em>* verplichte velden</em>
+                            <?php 
+                            if ($form_message) { ?>
+                            <p class="form-message">
+                                <?php echo $form_message; ?>
+                            </p>
+                            <?php } ?>
                             <div id="response"></div>
                         </div><!--contact-box-->
                     </div><!--span6-->    
