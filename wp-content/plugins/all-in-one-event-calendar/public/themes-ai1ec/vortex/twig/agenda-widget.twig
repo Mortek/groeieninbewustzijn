@@ -27,34 +27,38 @@
 					<div class="ai1ec-date-events">
 						{% for category in date_info.events %}
 							{% for event in category %}
-								<div class="ai1ec-event
-									ai1ec-event-id-{{ event.get( 'post_id' ) }}
-									ai1ec-event-instance-id-{{ event.get( 'instance_id' ) }}
-									{% if event.is_allday %}ai1ec-allday{% endif %}">
-
-										{% if event.is_allday %}
-											<span class="ai1ec-allday-badge">
-												{{ text_all_day }}
-											</span>
-										{% else %}
-											<span class="ai1ec-event-time">
-												{{ event.get_runtime( 'short_start_time' ) }}
-											</span>
-										{% endif %}
-
-										<span class="ai1ec-event-title">
-											{{ event.get_runtime( 'filtered_title' ) | truncate | raw }}
-											{% if show_location_in_title and event.get( 'venue' ) is not empty %}
-												<span class="ai1ec-event-location"
-													>{{ text_venue_separator | format( event.get( 'venue' ) ) }}</span>
+									<div class="ai1ec-event
+										ai1ec-event-id-{{ event.get( 'post_id' ) }}
+										ai1ec-event-instance-id-{{ event.get( 'instance_id' ) }}
+										{% if event.is_allday %}ai1ec-allday{% endif %}">
+										<a class="ai1ec-date-title ai1ec-load-view" href="{{ date_info.href | e('html_attr') }}">
+											{% if event.is_allday %}
+												<span class="ai1ec-allday-badge">
+													{{ text_all_day }}
+												</span>
+											{% else %}
+												<span class="ai1ec-event-time">
+													{{ event.get_runtime( 'short_start_time' ) }}
+												</span>
 											{% endif %}
-										</span>
 
-									{% include 'event-popup.twig' with {
-									'text_venue_separator': text_venue_separator
-									} %}
+											<span class="ai1ec-event-title">
+												{{ event.get_runtime( 'filtered_title' ) | truncate | raw }}
+												{% if show_location_in_title and event.get( 'venue' ) is not empty %}
+													<span class="ai1ec-event-location">
+														{{ text_venue_separator | format( event.get( 'venue' ) ) }}
+													</span>
+												{% endif %}
+											</span>
+											
 
-								</div>
+
+										{% include 'event-popup.twig' with {
+										'text_venue_separator': text_venue_separator
+										} %}
+									</a>
+									</div>
+								
 							{% endfor %} {# event in category #}
 						{% endfor %} {# category in date_info.events #}
 					</div>

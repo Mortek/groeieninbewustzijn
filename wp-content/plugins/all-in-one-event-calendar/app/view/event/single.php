@@ -75,12 +75,12 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 			'subscribe_buttons_text'  => $this->_registry
 				->get( 'view.calendar.subscribe-button' )
 				->get_labels(),
-			'text_when'               => __( 'When:', AI1EC_PLUGIN_NAME ),
-			'text_where'              => __( 'Where:', AI1EC_PLUGIN_NAME ),
-			'text_cost'               => __( 'Cost:', AI1EC_PLUGIN_NAME ),
+			'text_when'               => __( 'Wanneer:', AI1EC_PLUGIN_NAME ),
+			'text_where'              => __( 'Waar:', AI1EC_PLUGIN_NAME ),
+			'text_cost'               => __( 'Kosten:', AI1EC_PLUGIN_NAME ),
 			'text_contact'            => __( 'Contact:', AI1EC_PLUGIN_NAME ),
-			'text_free'               => __( 'Free', AI1EC_PLUGIN_NAME ),
-			'text_categories'         => __( 'Categories', AI1EC_PLUGIN_NAME ),
+			'text_free'               => __( 'Gratis', AI1EC_PLUGIN_NAME ),
+			'text_categories'         => __( 'Categorieën', AI1EC_PLUGIN_NAME ),
 			'text_tags'               => __( 'Tags', AI1EC_PLUGIN_NAME ),
 		);
 

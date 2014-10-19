@@ -80,7 +80,7 @@ class Ai1ec_View_Event_Time extends Ai1ec_Base {
 			if ( 'hidden' !== $start_date_display ) {
 				$output .= apply_filters(
 					'ai1ec_get_timespan_html_time_separator',
-					Ai1ec_I18n::_x( ' @ ', 'Event time separator' )
+					Ai1ec_I18n::_x( ' van ', 'Event time separator' )
 				);
 			}
 			$output .= $this->get_short_time( $start );
@@ -96,7 +96,7 @@ class Ai1ec_View_Event_Time extends Ai1ec_Base {
 		) {
 			$output .= apply_filters(
 				'ai1ec_get_timespan_html_date_separator',
-				Ai1ec_I18n::_x( ' – ', 'Event start/end separator' )
+				Ai1ec_I18n::_x( ' tot ', 'Event start/end separator' )
 			);
 
 			// If event ends on a different day, output end date.

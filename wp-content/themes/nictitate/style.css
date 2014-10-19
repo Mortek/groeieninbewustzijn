@@ -2753,7 +2753,7 @@ Contact page
     padding:7px 15px;
     color:#fff;
     background-color:#800080;
-    font-size:13px;
+    font-size:15px;
     font-weight:600;
     border:none;
     -webkit-transition: all 0.3s ease-in-out;
@@ -2770,7 +2770,7 @@ Contact page
     position:absolute;
     top:12px;
     left:15px;
-    font-size:12px;
+    font-size:15px;
 }
 .kopa-contact-page #contact-form p.textarea-block label.required {
     top:12px;
@@ -2805,9 +2805,11 @@ Contact page
     *display:inline;
     zoom:1;
 }
-
+#contact-information .accordion-title h3 a {
+    font-size: 17px;
+}
 #contact-information p {
-    font-size:13px;
+    font-size:15px;
     color:#666;
 }
 #contact-information i {
@@ -3354,8 +3356,9 @@ input[type="text"]:focus {
 .more-reviews-text {
     color: #fff;
     position: absolute;
-    top: 3px;
-    left: -100px;
+    top: 2px;
+    left: -120px;
+    font-size: 15px;
 }
 .elements-box {
     font-size: 16px;
@@ -3379,6 +3382,18 @@ input[type="text"]:focus {
     margin-left: 0.15em;
 }
 
+#kopa_widget_services_intro-2 article.entry-item p {
+    font-size: 16px;
+}
+
+#kopa_widget_services_intro-2 article.entry-item a.more-link {
+    font-size: 14px;
+}
+
+#kopa_widget_testimonials-2 article.testimonial-detail p {
+    font-size: 16px;
+}
+
 /*
  * CALENDAR CSS
  *
@@ -3391,3 +3406,45 @@ input[type="text"]:focus {
  .ai1ec-tooltip-arrow {
     display: none;
  }
+
+ .ai1ec-agenda-widget-view {
+    max-width: 100%;
+ }
+
+.widget_ai1ec_agenda_widget h2 span:before {
+    font-family: 'FontAwesome';
+    content: "\f073";
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+} 
+
+.ai1ec-agenda-view .ai1ec-event {
+    min-height: 98px;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-event > a {
+    width: 98%;
+    margin-top: -97px;
+    text-align: left;
+    height: 89px;
+}
+
+.ai1ec-agenda-view p {
+    font-size: 15px !important;
+}
+
+.ai1ec-agenda-view .ai1ec-event-time {
+    font-size: 17px !important;
+}
+
+.ai1ec-agenda-view .ai1ec-event-title {
+    font-size: 19px !important;
+}
+
+.ai1ec-date .ai1ec-event-time, .ai1ec-date .ai1ec-event-title {
+    font-size: 18px !important;
+}

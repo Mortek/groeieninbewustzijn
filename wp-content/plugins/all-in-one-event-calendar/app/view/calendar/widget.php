@@ -271,7 +271,7 @@ class Ai1ec_View_Admin_Widget extends WP_Widget {
 		$args['text_all_day']              = __( 'all-day', AI1EC_PLUGIN_NAME );
 		$args['text_view_calendar']        = __( 'View Calendar', AI1EC_PLUGIN_NAME );
 		$args['text_edit']                 = __( 'Edit', AI1EC_PLUGIN_NAME );
-		$args['text_venue_separator']      = __( '@ %s', AI1EC_PLUGIN_NAME );
+		$args['text_venue_separator']      = __( 'bij %s', AI1EC_PLUGIN_NAME );
 		$args['text_subscribe_label']      = __( 'Add', AI1EC_PLUGIN_NAME );
 		$args['subscribe_buttons_text']    = $this->_registry
 			->get( 'view.calendar.subscribe-button' )
