@@ -3378,3 +3378,16 @@ input[type="text"]:focus {
     vertical-align: -0.62em;
     margin-left: 0.15em;
 }
+
+/*
+ * CALENDAR CSS
+ *
+ */
+
+ .ai1ec-tooltip-inner {
+    display: none;
+ }
+
+ .ai1ec-tooltip-arrow {
+    display: none;
+ }
