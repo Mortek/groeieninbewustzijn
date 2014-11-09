@@ -1746,7 +1746,7 @@ class Kopa_Widget_Subscribe extends WP_Widget {
                 $email = $_POST['email'];
                 $to = 'mauricemoret1991@gmail.com';
                 $subject = 'Inschrijving op de nieuwsbrief';
-                $body = "Er is een nieuwe aanmelding op de nieuwsbrief van www.groeieninbewustzijn.nl: <b> $email </b>";
+                $body = "Er is een nieuwe aanmelding op de nieuwsbrief van www.groeieninbewustzijn.nl: $email";
 
                 $form_message = 'U heeft zich ingeschreven op de nieuwsbrief!';
 
