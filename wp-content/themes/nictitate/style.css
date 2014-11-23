@@ -18,7 +18,7 @@ Common styles
 ============================================================ */
 
 body {
-    color: #888;
+    color: #333;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
 }
@@ -2876,7 +2876,7 @@ Elements page
 .elements-box h4,
 .elements-box h5,
 .elements-box h6  {
-    color:#555;
+    color:#222;
     margin:0 0 10px;
 }
 
