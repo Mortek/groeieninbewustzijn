@@ -3422,11 +3422,12 @@ input[type="text"]:focus {
     -webkit-font-smoothing: antialiased;
 } 
 
-.ai1ec-agenda-view .ai1ec-event {
-    min-height: 98px;
+.ai1ec-date-events {
+    min-height: 114px;
 }
 
 .ai1ec-agenda-widget-view .ai1ec-event > a {
+    padding: 15px 10px;
     width: 98%;
     margin-top: -97px;
     text-align: left;
