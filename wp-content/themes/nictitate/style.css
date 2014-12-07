@@ -573,8 +573,10 @@ Header
 }
 #logo-image a,
 #logo-image a img {
-    width:100%;
-    display:block;
+    width: 100px;
+    display: block;
+    margin-top: -28px;
+    margin-left: 13px;
 }
 
 /*----- Main Menu -----*/
@@ -789,6 +791,11 @@ Header
 .cbp-af-header.cbp-af-header-shrink #logo-image {
     margin-top:12px;
     height:25px;
+}
+.cbp-af-header.cbp-af-header-shrink #logo-image a img {
+    width: 49px;
+    display: block;
+    margin-top: 18px;
 }
 .cbp-af-header.cbp-af-header-shrink #main-menu > li > ul {
     top:50px;

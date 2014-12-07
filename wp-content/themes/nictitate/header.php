@@ -30,14 +30,13 @@
                     <div class="wrapper">
                         <div class="row-fluid">
                             <div class="span12 clearfix">
-                                <!-- div id="logo-image" class="<?php echo ( display_header_text() && get_header_image() ) ? 'kp-text-logo' : ''; ?>">
-                                    <?php if (get_header_image()) { ?>
-                                        <a href="<?php echo esc_url(home_url()); ?>">
-                                            <img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?> <?php _e('Logo', kopa_get_domain()); ?>">
-                                        </a>
-                                    <?php } ?>
-                                    <h1 class="site-title"><a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('name'); ?></a></h1>
-                                </div>-->
+                            
+                                <div id="logo-image">
+                                    <a href="http://www.groeieninbewustzijn.nl">
+                                        <img src="/wp-content/themes/nictitate/images/icons/gib-logo.png" />
+                                    </a>
+                                </div>
+                                
                                 <nav id="main-nav">
                                     <?php
                                     if (has_nav_menu('main-nav')) {
