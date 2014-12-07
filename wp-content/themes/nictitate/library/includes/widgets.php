@@ -1736,26 +1736,6 @@ class Kopa_Widget_Subscribe extends WP_Widget {
         // }
         ?>
 
-        <?php
-        if(isset($_POST['newsletter_submit'])) 
-        { 
-            if (empty($_POST['email']) || $_POST['email'] === "Vul uw e-mailadres in...") {
-                $form_message = 'Het ingevulde e-mailadres is onjuist';
-            }
-            else {
-                $email = $_POST['email'];
-                $to = 'mauricemoret1991@gmail.com';
-                $subject = 'Inschrijving op de nieuwsbrief';
-                $body = "Er is een nieuwe aanmelding op de nieuwsbrief van www.groeieninbewustzijn.nl: $email";
-
-                $form_message = 'U heeft zich ingeschreven op de nieuwsbrief!';
-
-                mail($to, $subject, $body);
-            }
-            
-        }
-        ?>
-
         <form id="newsletter-form" class="newsletter-form clearfix" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <p class="input-email clearfix">
                 <input type="text" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" name="email" value="<?php _e('Vul uw e-mailadres in...', kopa_get_domain()); ?>" class="email" size="40">

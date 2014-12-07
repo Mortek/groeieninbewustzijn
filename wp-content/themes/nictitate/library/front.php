@@ -283,7 +283,7 @@ function kopa_custom_front_localization() {
             ),
             'email' => array(
                 'required' => __('Vul uw e-mailadres in', kopa_get_domain()),
-                'email' => __('Please enter a valid email.', kopa_get_domain())
+                'email' => __('Vul een geldig e-mailadres in.', kopa_get_domain())
             ),
             'url' => array(
                 'required' => __('Please enter your url.', kopa_get_domain()),

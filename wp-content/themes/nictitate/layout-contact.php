@@ -16,41 +16,12 @@ $youtube = get_option( 'kopa_theme_options_social_links_youtube_url' );
 $instagram = get_option( 'kopa_theme_options_social_links_instagram_url' );
 
 get_header(); 
-
-if(isset($_POST['contact_submit'])) 
-{ 
-    if (empty($_POST['name']) && empty($_POST['email']) && empty($_POST['message'])) {
-        $form_message = 'Vul alle verplichten velden in a.u.b.';
-    }
-    else {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-
-        $to = 'mauricemoret1991@gmail.com';
-
-        if ($_POST['subject']) {
-            $subject = $_POST['subject'];
-        }
-        else {
-            $subject = 'Reactie op het contactformulier';
-        }
-
-        $body = "Er is een nieuwe reactie op het contactformilier: <br/><br/>
-
-                <b>Naam:</b> $name <br/>
-                <b>Onderwerp:</b> $subject <br/>
-                <b>Email:</b> $email <br/>
-                <b>Bericht:</b><br/> $message
-                ";
-
-        $form_message = 'Bedankt voor uw bericht. Ik zal zo spoedig mogelijk contact met u opnemen.';
-
-        mail($to, $subject, $body);
-    }
-    
+if ($_GET["submitted"]) {
+    $form_message = 'Bedankt voor uw bericht. Ik zal zo spoedig mogelijk contact met u opnemen.';
 }
-
+else {
+    $form_message = '';
+}
 ?>
 
 <div id="main-content">
@@ -61,8 +32,16 @@ if(isset($_POST['contact_submit']))
         <div class="row-fluid">
             <div class="span12">
 
-                <?php get_template_part( 'contents' ) ?>
+                 <?php if($form_message): ?>
+                <div class="row-fluid">
+                    <div class="span12 clearfix">
+                        <h1 class="newsletter-confirmation"><?php echo $form_message; ?></h1>
+                        <br/>
+                    </div>
+                </div>
+                <?php endif; ?>
 
+                <?php get_template_part( 'contents' ) ?>
                 
                 <div class="kopa-contact-page row-fluid">
                     <div class="span6">                             
@@ -128,12 +107,7 @@ if(isset($_POST['contact_submit']))
                         </div>
                     </div><!--span6-->
 
-
-
-
                 </div>
-
-
 
             </div><!--span12-->
         </div><!--row-fluid-->

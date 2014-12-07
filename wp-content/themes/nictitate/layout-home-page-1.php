@@ -1,4 +1,10 @@
 <?php 
+if ($_GET["newsletter"]) {
+    $form_message = 'Bedankt voor het inschrijven op de nieuwsbrief.';
+}
+else {
+    $form_message = '';
+}
 $kopa_setting = kopa_get_template_setting(); 
 $sidebars = $kopa_setting['sidebars'];
 
@@ -12,6 +18,15 @@ get_header(); ?>
     </div>
 
     <div class="wrapper">
+
+        <?php if($form_message): ?>
+        <div class="row-fluid">
+            <div class="span12 clearfix">
+                <h1 class="newsletter-confirmation"><?php echo $form_message; ?></h1>
+                <br/>
+            </div>
+        </div>
+        <?php endif; ?>
 
         <div class="row-fluid">
         
