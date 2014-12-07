@@ -3012,8 +3012,10 @@ Elements page
 }
 .da-thumbs li .da-thumbs-hover p a.link-gallery {
     background:url(images/icons/search.png) no-repeat center center;
-    margin:-11px 0 0 0;
-    right:44%;
+    margin: -57px 0 0 0;
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 .da-thumbs li .da-thumbs-hover p a.link-detail {
     background:url(images/icons/big-link.png) no-repeat center center;

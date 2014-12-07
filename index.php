@@ -60,7 +60,6 @@ if(isset($_POST['contact_submit']))
                 Onderwerp: $subject 
                 Email: $email 
                 Bericht:
-
                 $message
                 ";
 
