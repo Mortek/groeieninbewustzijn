@@ -3467,3 +3467,8 @@ input[type="text"]:focus {
 .newsletter-confirmation {
     color: #000;
 }
+
+a.ai1ec-read-more {
+    background-color: #800080 !important;
+    color: #fff !important;
+}

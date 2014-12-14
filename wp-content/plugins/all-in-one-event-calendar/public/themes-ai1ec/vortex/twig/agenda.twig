@@ -79,8 +79,8 @@
 											<a {{ data_type_events | raw }}
 												class="ai1ec-read-more ai1ec-btn ai1ec-btn-default
 													ai1ec-load-event"
-												href="/contact/">
-												Reserveer nu! <i class="ai1ec-fa ai1ec-fa-arrow-right"></i>
+												href="/contact/?subject={{ event.get_runtime( 'filtered_title' ) | raw }}. {{ event | timespan( 'long' ) | raw }}">
+												Reserveer nu <i class="ai1ec-fa ai1ec-fa-arrow-right"></i>
 											</a>
 										</div>
 										{% set categories = event.get_runtime( 'categories_html' ) %}
