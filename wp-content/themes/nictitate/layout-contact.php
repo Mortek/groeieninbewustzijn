@@ -22,6 +22,13 @@ if ($_GET["submitted"]) {
 else {
     $form_message = '';
 }
+
+if ($_GET["subject"]) {
+    $subject = $_GET["subject"];
+}
+else {
+    $subject = '';
+}
 ?>
 
 <div id="main-content">
@@ -58,7 +65,7 @@ else {
                                 </p>
                                 <p class="input-block clearfix">
                                     <label class="required" for="contact_subject"><?php _e('Onderwerp:', kopa_get_domain()); ?></label>
-                                    <input type="text" class="valid" name="subject" id="contact_subject" value="">
+                                    <input type="text" class="valid" name="subject" id="contact_subject" value="<?php echo $subject; ?>">
                                 </p>
                                 <p class="textarea-block clearfix">                        
                                     <label class="required" for="contact_message"><?php _e('Bericht', kopa_get_domain()); ?> <span><?php _e(' *', kopa_get_domain()); ?></span>:</label>
