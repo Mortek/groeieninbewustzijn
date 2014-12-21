@@ -23,7 +23,7 @@ if(isset($_POST['newsletter_submit']))
     }
     else {
         $email = $_POST['email'];
-        $to = 'mauricemoret1991@gmail.com';
+        $to = 'info@groeieninbewustzijn.nl';
         $subject = 'Inschrijving op de nieuwsbrief';
         $body = "Er is een nieuwe aanmelding op de nieuwsbrief van groeieninbewustzijn: $email";
 
@@ -45,7 +45,7 @@ if(isset($_POST['contact_submit']))
         $email = $_POST['email'];
         $message = $_POST['message'];
 
-        $to = 'mauricemoret1991@gmail.com';
+        $to = 'info@groeieninbewustzijn.nl';
 
         if ($_POST['subject']) {
             $subject = $_POST['subject'];
