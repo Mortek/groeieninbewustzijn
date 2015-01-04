@@ -18,6 +18,7 @@ Common styles
 ============================================================ */
 
 body {
+	background-color: #800080 !important;
     color: #333;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;

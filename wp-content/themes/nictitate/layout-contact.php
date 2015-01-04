@@ -119,10 +119,7 @@ else {
             </div><!--span12-->
         </div><!--row-fluid-->
     </div><!--wrapper-->
-
-</div> <!-- #main-menu -->
     
 </div><!--main-content-->
-
 
 <?php get_footer(); ?>
