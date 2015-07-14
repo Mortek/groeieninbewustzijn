@@ -5,6 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="google-site-verification" content="LTJN796-2FYPfnn4OezX0dht2NcOlb1yfVOqs-JU1uA" />
         <title><?php wp_title('|', true, 'right'); ?></title>
+               
+        <meta property="og:title" content="Groeien in bewustzijn" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="http://www.groeieninbewustzijn.nl/wp-content/uploads/2014/09/kunst-004-kopie-1024x767.jpg" />
+        <meta property="og:url" content="http://www.groeieninbewustzijn.nl/" />
+        <meta property="og:description" content="Als je altijd doet, wat je altijd deed, zal je altijd krijgen, wat je altijd kreeg. Ik begeleid mensen en kinderen die willen veranderen, die hun patronen willen doorbreken en die anders met moeilijke situaties om willen gaan. Mensen die willen groeien in bewustzijn." />
+
         <link rel="profile" href="http://gmpg.org/xfn/11">                
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />               
         <?php wp_head(); ?>

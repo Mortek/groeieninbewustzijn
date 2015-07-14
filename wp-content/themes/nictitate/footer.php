@@ -43,7 +43,7 @@ $footer_sidebar[2] = ($kopa_setting) ? $sidebars[$total - 1] : 'sidebar_5';
                 <p id="copyright"><?php echo stripslashes(get_option('kopa_theme_options_copyright', 'Copyrights. &copy; 2014')); ?></p>
             </div>-->
             <div class="span3">
-                <p id="made-by">Realisatie door: <a href="http://www.vongola.nl" target="_blank">Vongola</a></p>
+                <p id="made-by">Realisatie door: <a href="http://www.mauricemoret.nl" target="_blank">Maurice Moret</a></p>
             </div><!--span4-->
             <div class="span9">
                 <?php

@@ -26,10 +26,11 @@ if(isset($_POST['newsletter_submit']))
         $to = 'info@groeieninbewustzijn.nl';
         $subject = 'Inschrijving op de nieuwsbrief';
         $body = "Er is een nieuwe aanmelding op de nieuwsbrief van groeieninbewustzijn: $email";
+        $headers = "Reply-to: $email";
 
         $form_message = 'U heeft zich ingeschreven op de nieuwsbrief!';
 
-        mail($to, $subject, $body);
+        mail($to, $subject, $body, $headers);
         header('Location: http://www.groeieninbewustzijn.nl?newsletter=true');
     }
 }
@@ -44,6 +45,7 @@ if(isset($_POST['contact_submit']))
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
+        $headers = "Reply-to: $email";
 
         $to = 'info@groeieninbewustzijn.nl';
 
@@ -65,7 +67,7 @@ if(isset($_POST['contact_submit']))
 
         $form_message = 'Bedankt voor uw bericht. Ik zal zo spoedig mogelijk contact met u opnemen.';
 
-        mail($to, $subject, $body);
+        mail($to, $subject, $body, $headers);
         header('Location: http://www.groeieninbewustzijn.nl/contact?submitted=true');
     }
     
