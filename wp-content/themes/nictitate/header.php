@@ -4,7 +4,17 @@
         <meta charset="<?php bloginfo('charset'); ?>" />                   
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="google-site-verification" content="LTJN796-2FYPfnn4OezX0dht2NcOlb1yfVOqs-JU1uA" />
-        <title><?php wp_title('|', true, 'right'); ?></title>
+        <title>
+            <?php 
+            $page_title = wp_title('', false);
+            if ($page_title !== 'Groeien in bewustzijn') {
+                echo $page_title . ' | Groeien in bewustzijn | Margo Riphagen';
+            }
+            else {
+                echo $page_title . ' | Margo Riphagen';
+            }
+            ?>  
+        </title>
                
         <meta property="og:title" content="Groeien in bewustzijn" />
         <meta property="og:type" content="website" />
