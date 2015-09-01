@@ -21,8 +21,7 @@
         <meta property="og:type" content="website" />
         <meta property="og:image" content="http://www.groeieninbewustzijn.nl/wp-content/uploads/2014/09/kunst-004-kopie-1024x767.jpg" />
         <meta property="og:url" content="http://www.groeieninbewustzijn.nl/" />
-        <meta property="og:description" content="Als je altijd doet, wat je altijd deed, zal je altijd krijgen, wat je altijd kreeg. Ik begeleid mensen en kinderen die willen veranderen, die hun patronen willen doorbreken en die anders met moeilijke situaties om willen gaan. Mensen die willen groeien in bewustzijn." />
-
+        
         <link rel="profile" href="http://gmpg.org/xfn/11">                
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />               
         <?php wp_head(); ?>
@@ -33,6 +32,10 @@
     $layout .= ' heavy-dark-footer';
     ?>
     <body <?php body_class($layout); ?>>
+    <?php
+    //$page_content = get_template_part( 'contents' );
+     //var_dump($page_content);
+    ?>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
