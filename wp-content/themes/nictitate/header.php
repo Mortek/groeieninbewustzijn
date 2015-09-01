@@ -15,7 +15,8 @@
             }
             ?>  
         </title>
-               
+            
+        <meta name="google-site-verification" content="fNoY-d8Ex5SRgn7JtWnL__0oKxXU4ENEBwhsbv85KqI" /> 
         <meta property="og:title" content="Groeien in bewustzijn" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="http://www.groeieninbewustzijn.nl/wp-content/uploads/2014/09/kunst-004-kopie-1024x767.jpg" />

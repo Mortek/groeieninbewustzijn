@@ -1,13 +1,19 @@
+Sitemap: http://www.groeieninbewustzijn.nl/sitemap.xml
+
 User-agent: *
-Disallow: /calendar/action~posterboard/
-Disallow: /calendar/action~agenda/
-Disallow: /calendar/action~oneday/
-Disallow: /calendar/action~month/
-Disallow: /calendar/action~week/
-Disallow: /calendar/action~stream/
-Disallow: /agenda/action~posterboard/
-Disallow: /agenda/action~agenda/
-Disallow: /agenda/action~oneday/
-Disallow: /agenda/action~month/
-Disallow: /agenda/action~week/
-Disallow: /agenda/action~stream/
+	Disallow: /wp-admin
+	Disallow: /wp-includes
+	Disallow: /wp-content/plugins/
+	Disallow: /wp-content/themes/
+	Disallow: /calendar/action~posterboard/
+	Disallow: /calendar/action~agenda/
+	Disallow: /calendar/action~oneday/
+	Disallow: /calendar/action~month/
+	Disallow: /calendar/action~week/
+	Disallow: /calendar/action~stream/
+	Disallow: /agenda/action~posterboard/
+	Disallow: /agenda/action~agenda/
+	Disallow: /agenda/action~oneday/
+	Disallow: /agenda/action~month/
+	Disallow: /agenda/action~week/
+	Disallow: /agenda/action~stream/
