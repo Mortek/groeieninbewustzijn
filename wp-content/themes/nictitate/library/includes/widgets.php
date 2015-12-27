@@ -1736,7 +1736,7 @@ class Kopa_Widget_Subscribe extends WP_Widget {
         // }
         ?>
 
-        <form id="newsletter-form" class="newsletter-form clearfix" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+       <!--  <form id="newsletter-form" class="newsletter-form clearfix" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <p class="input-email clearfix">
                 <input type="text" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" name="email" value="<?php _e('Vul uw e-mailadres in...', kopa_get_domain()); ?>" class="email" size="40">
                 <input name="newsletter_submit" type="submit" value="Inschrijven" class="submit">
@@ -1748,7 +1748,9 @@ class Kopa_Widget_Subscribe extends WP_Widget {
             </p>
             <?php } ?>
 
-        </form>
+        </form> -->
+
+        <p><a style="color:#fff;" href="/nieuwsbrief">Schrijf je in voor de nieuwsbrief!</a></p>
 
         <?php 
         echo $after_widget;
