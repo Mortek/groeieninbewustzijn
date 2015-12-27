@@ -584,7 +584,7 @@ Header
 #main-nav {
     float:right;
     position:relative;
-    z-index:9999;
+    z-index:5000;
 }
 #main-menu > li {
     float:left;
@@ -592,7 +592,7 @@ Header
     margin:0;
     background:url(images/background/line-1.png) repeat-y right 0;
     position:relative;
-    z-index:9999;
+    z-index:5000;
 }
 #main-menu > li > a {
     text-align:center;
@@ -651,14 +651,14 @@ Header
     left:0;
     background-color:#000;
     background-color:rgba(0,0,0,.94);
-    z-index:9999;
+    z-index:5000;
 }
 #main-menu li ul li {
     padding:10px 15px;
     position:relative;
     list-style:none;
     margin:0;
-    z-index:9999;
+    z-index:5000;
 }
 #main-menu li ul li:first-child {
     border-top:none;
@@ -3472,4 +3472,16 @@ input[type="text"]:focus {
 a.ai1ec-read-more {
     background-color: #800080 !important;
     color: #fff !important;
+}
+
+.mc-modal {
+    position: fixed;
+    top: 25% !important;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+}
+
+.mc-closeModal {
+    z-index: 7500;
 }
