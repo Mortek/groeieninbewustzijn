@@ -289,10 +289,10 @@ border-radius: 50%;
 .wpmchimpas .wpmcinfierr{
   display: block;
   text-align: left;
-  height: 10px;
-  line-height: 10px;
+  height: 28px;
+  line-height: 25px;
   margin-bottom: -10px;
-  font-size: 10px;
+  font-size: 16px;
   color: red;
   <?php
     if(isset($theme["slider_status_f"])){
@@ -699,12 +699,15 @@ echo 'top:'.$theme["slider_trigger_top"].'%;';
 ?>
 }
 .wpmchimpas-trig .wpmchimpas-trigi{ 
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
 background: #0066CB;
-width:50px;
+width: 85px;
+font-weight: bold;
+padding: 10px 0px 0px 18px;
 height:50px;
--webkit-border-radius:1px;
--moz-border-radius:1px;
-border-radius:1px;
+margin: 0 0 0 -5px;
 <?php
 if(isset($theme["slider_trigger_bg"])){
 echo 'background:'.$theme["slider_trigger_bg"].';';
@@ -738,7 +741,6 @@ if(isset($theme["slider_trigger_i"])){
   else $ti=$theme["slider_trigger_i"];
 }
  ?>
-content:<?php echo $this->getIcon($ti,32,(isset($theme["slider_trigger_c"]))?$theme["slider_trigger_c"]:'#fff');?>;
 height: 32px;
 width: 32px;
 display: block;
@@ -800,7 +802,7 @@ $this->stfield($form['fields'],$set); ?>
 <div class="wpmchimpas-overlay"></div>
 <div id="wpmchimpas-trig" class="chimpmatecss" <?php if(isset($wpmchimpa['slider_trigger_scroll'])) echo 'class="scrollhide"';?>>
   <div class="wpmchimpas-trigc">
-    <div class="wpmchimpas-trigi"></div>
+    <div class="wpmchimpas-trigi">Inschrijven Nieuwsbrief</div>
     <div class="wpmchimpas-trigh"></div>
   </div>
 </div>
