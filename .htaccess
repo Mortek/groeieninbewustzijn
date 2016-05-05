@@ -1,15 +1,18 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /groeieninbewustzijn/
+RewriteBase /
 
-RewriteCond C:\xampp\htdocs\groeieninbewustzijn/wp-content/sitemaps%{REQUEST_URI} -f
-RewriteRule \.xml(\.gz)?$ /groeieninbewustzijn/wp-content/sitemaps%{REQUEST_URI} [L]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond /home/deb57640n7/domains/groeieninbewustzijn.nl/public_html/wp-content/sitemaps%{REQUEST_URI} -f
+RewriteRule \.xml(\.gz)?$ /wp-content/sitemaps%{REQUEST_URI} [L]
 
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /groeieninbewustzijn/index.php [L]
+RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress

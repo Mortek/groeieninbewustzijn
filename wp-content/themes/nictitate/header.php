@@ -19,8 +19,8 @@
         <meta name="google-site-verification" content="fNoY-d8Ex5SRgn7JtWnL__0oKxXU4ENEBwhsbv85KqI" /> 
         <meta property="og:title" content="Groeien in bewustzijn" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="http://www.groeieninbewustzijn.nl/wp-content/uploads/2014/09/kunst-004-kopie-1024x767.jpg" />
-        <meta property="og:url" content="http://www.groeieninbewustzijn.nl/" />
+        <meta property="og:image" content="https://www.groeieninbewustzijn.nl/wp-content/uploads/2014/09/kunst-004-kopie-1024x767.jpg" />
+        <meta property="og:url" content="https://www.groeieninbewustzijn.nl/" />
         
         <link rel="profile" href="http://gmpg.org/xfn/11">                
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />               
@@ -66,7 +66,7 @@
                             <div class="span12 clearfix">
                             
                                 <div id="logo-image">
-                                    <a href="http://www.groeieninbewustzijn.nl">
+                                    <a href="https://www.groeieninbewustzijn.nl">
                                         <img src="/wp-content/themes/nictitate/images/icons/gib-logo.png" />
                                     </a>
                                 </div>

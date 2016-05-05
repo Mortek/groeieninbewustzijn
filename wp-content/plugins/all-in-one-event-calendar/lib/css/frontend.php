@@ -180,6 +180,8 @@ class Ai1ec_Css_Frontend extends Ai1ec_Base {
 	 */
 	public function add_link_to_html_for_frontend() {
 		$url = $this->get_css_url();
+		$url = str_replace('http', 'https', $url);
+
 		if ( '' !== $url ) {
 			wp_enqueue_style( 'ai1ec_style', $url, array(), AI1EC_VERSION );
 		}

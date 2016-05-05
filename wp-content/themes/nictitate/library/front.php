@@ -137,7 +137,7 @@ function kopa_front_enqueue_scripts() {
         $dir = get_template_directory_uri();
 
         /* GOOGLE FONTS */
-        wp_enqueue_script('kopa-google-api', 'http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js', array(), NULL);
+        wp_enqueue_script('kopa-google-api', 'https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js', array(), NULL);
         wp_enqueue_script('kopa-google-fonts', $dir . '/js/google-fonts.js', array('kopa-google-api'), NULL);
 
         $google_fonts = kopa_get_google_font_array();
