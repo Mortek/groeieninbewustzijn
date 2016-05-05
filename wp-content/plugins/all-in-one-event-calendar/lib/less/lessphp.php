@@ -158,16 +158,28 @@ class Ai1ec_Less_Lessphp extends Ai1ec_Base {
 				$this->lessc->addImportDir( $dir );
 			}
 		}
-		$variables['fontdir'] = '~"' . $theme['theme_url'] . '/font"';
-		$variables['fontdir_default'] = '~"' . $this->default_theme_url . 'font"';
-		$variables['imgdir'] = '~"' . $theme['theme_url'] . '/img"';
-		$variables['imgdir_default'] = '~"' . $this->default_theme_url . 'img"';
+		// $variables['fontdir'] = '~"' . $theme['theme_url'] . '/font"';
+		// $variables['fontdir_default'] = '~"' . $this->default_theme_url . 'font"';
+		// $variables['imgdir'] = '~"' . $theme['theme_url'] . '/img"';
+		// $variables['imgdir_default'] = '~"' . $this->default_theme_url . 'img"';
+		// if ( true === $compile_core ) {
+		// 	$variables['fontdir'] = '~"../font"';
+		// 	$variables['fontdir_default'] = '~"../font"';
+		// 	$variables['imgdir'] = '~"../img"';
+		// 	$variables['imgdir_default'] = '~"../img"';
+		// }
+
+		$variables['fontdir'] = "https://www.groeieninbewustzijn.nl/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/font";
+		$variables['fontdir_default'] = "https://www.groeieninbewustzijn.nl/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/font";
+		$variables['imgdir'] = "https://www.groeieninbewustzijn.nl/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/img";
+		$variables['imgdir_default'] = "https://www.groeieninbewustzijn.nl/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/img";
 		if ( true === $compile_core ) {
-			$variables['fontdir'] = '~"../font"';
-			$variables['fontdir_default'] = '~"../font"';
-			$variables['imgdir'] = '~"../img"';
-			$variables['imgdir_default'] = '~"../img"';
+			$variables['fontdir'] = "https://www.groeieninbewustzijn.nl/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/../font";
+			$variables['fontdir_default'] = "https://www.groeieninbewustzijn.nl/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/../font";
+			$variables['imgdir'] = "https://www.groeieninbewustzijn.nl/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/../img";
+			$variables['imgdir_default'] = "https://www.groeieninbewustzijn.nl/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/../img";
 		}
+		
 		try {
 			$this->parsed_css = $this->lessc->parse(
 				$this->unparsed_variable_file,
