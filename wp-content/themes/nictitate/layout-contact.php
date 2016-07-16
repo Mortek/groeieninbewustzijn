@@ -54,7 +54,7 @@ else {
                     <div class="span6">                             
                         <div id="contact-box">
                             <h2 class="contact-title">Neem contact op!<span></span></h2>
-                            <form id="contact-form" class="clearfix" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                            <form id="contact-form" class="clearfix" action="/custom_forms.php" method="post">
                                 <p class="input-block clearfix">
                                     <label class="required" for="contact_name"><?php _e('Naam', kopa_get_domain()); ?> <span><?php _e(' *', kopa_get_domain()); ?></span>:</label>
                                     <input class="valid" type="text" name="name" id="contact_name" value="">
