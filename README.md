@@ -1,2 +1,2 @@
-Groeieninbewustzijn
+groeieninbewustzijn
 ===================

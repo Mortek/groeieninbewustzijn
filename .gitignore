@@ -1,4 +1,2 @@
 *.log
 wp-config.php
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
