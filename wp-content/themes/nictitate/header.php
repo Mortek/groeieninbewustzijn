@@ -7,12 +7,13 @@
         <title>
             <?php 
             $page_title = wp_title('', false);
-            if ($page_title !== 'Groeien in bewustzijn') {
-                echo $page_title . ' | Groeien in bewustzijn | Margo Riphagen';
-            }
-            else {
-                echo $page_title . ' | Margo Riphagen';
-            }
+            // if ($page_title !== 'Groeien in bewustzijn') {
+            //     echo $page_title . ' | Groeien in bewustzijn | Margo Riphagen';
+            // }
+            // else {
+            //     echo $page_title . ' | Margo Riphagen';
+            // }
+            echo $page_title;
             ?>  
         </title>
             
