@@ -1,4 +1,4 @@
-Sitemap: http://www.groeieninbewustzijn.nl/sitemap.xml
+Sitemap: http://www.intenceopleidingen.nl/sitemap.xml
 
 User-agent: *
 	Disallow: /wp-admin

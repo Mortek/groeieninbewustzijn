@@ -14,7 +14,7 @@ if(isset($_POST['newsletter_submit']))
         $form_message = 'U heeft zich ingeschreven op de nieuwsbrief!';
 
         mail($to, $subject, $body, $headers);
-        header('Location: http://www.groeieninbewustzijn.nl?newsletter=true');
+        header('Location: https://www.intenceopleidingen.nl?newsletter=true');
     }
 }
 
@@ -51,7 +51,7 @@ if(isset($_POST['contact_submit']))
         $form_message = 'Bedankt voor uw bericht. Ik zal zo spoedig mogelijk contact met u opnemen.';
 
         mail($to, $subject, $body, $headers);
-        header('Location: http://www.groeieninbewustzijn.nl/contact?submitted=true');
+        header('Location: https://www.intenceopleidingen.nl/contact?submitted=true');
     }
     
 }

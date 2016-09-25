@@ -6,7 +6,7 @@ RewriteBase /
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-RewriteCond /home/deb57640n7/domains/groeieninbewustzijn.nl/public_html/wp-content/sitemaps%{REQUEST_URI} -f
+RewriteCond /home/deb57640n8/domains/intenceopleidingen.nl/public_html/wp-content/sitemaps%{REQUEST_URI} -f
 RewriteRule \.xml(\.gz)?$ /wp-content/sitemaps%{REQUEST_URI} [L]
 
 RewriteRule ^index\.php$ - [L]

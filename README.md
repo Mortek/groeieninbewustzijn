@@ -1,2 +1,2 @@
-groeieninbewustzijn
+intenceopleidingen
 ===================
