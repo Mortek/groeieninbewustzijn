@@ -3484,3 +3484,15 @@ a.ai1ec-read-more {
 .mc-closeModal {
     z-index: 7500;
 }
+
+.ai1ec-single-event > .ai1ec-actions {
+    display: none !important;
+}
+
+.ai1ec-single-event > .ai1ec-event-details {
+    overflow: inherit;
+}
+
+div.elements-box > div.timely.ai1ec-single-event > div.ai1ec-event-details.ai1ec-clearfix > div > div.ai1ec-field-label.ai1ec-col-sm-3 {
+    display: none !important;
+}
