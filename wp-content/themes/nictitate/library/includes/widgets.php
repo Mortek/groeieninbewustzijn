@@ -301,7 +301,6 @@ class Kopa_Widget_Services_Intro extends WP_Widget {
                 <article class="entry-item">
                     <h2 class="entry-title clearfix"><span class="<?php echo $icon_class; ?>"></span><a href="<?php echo $service_url; ?>"><?php the_title(); ?></a></h2>
                     <?php the_content(); ?>
-                    <a href="<?php echo $service_url; ?>" class="more-link clearfix"><?php _e( 'Lees meer', kopa_get_domain() ); ?> <span class="fa fa-forward"></span></a>
                 </article>
             </li>
         <?php 
