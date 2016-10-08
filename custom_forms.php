@@ -6,9 +6,9 @@ if(isset($_POST['newsletter_submit']))
     }
     else {
         $email = $_POST['email'];
-        $to = 'info@groeieninbewustzijn.nl';
+        $to = 'info@intenceopleidingen.nl';
         $subject = 'Inschrijving op de nieuwsbrief';
-        $body = "Er is een nieuwe aanmelding op de nieuwsbrief van groeieninbewustzijn: $email";
+        $body = "Er is een nieuwe aanmelding op de nieuwsbrief van intenceopleidingen: $email";
         $headers = "Reply-to: $email";
 
         $form_message = 'U heeft zich ingeschreven op de nieuwsbrief!';
@@ -30,7 +30,7 @@ if(isset($_POST['contact_submit']))
         $message = $_POST['message'];
         $headers = "Reply-to: $email";
 
-        $to = 'info@groeieninbewustzijn.nl';
+        $to = 'info@intenceopleidingen.nl';
 
         if ($_POST['subject']) {
             $subject = $_POST['subject'];
