@@ -1,6 +1,22 @@
 <?php 
 if ($_GET["newsletter"]) {
-    $form_message = 'Bedankt voor het inschrijven op de nieuwsbrief.';
+    $form_message = 'Bedankt voor het inschrijven op de nieuwsbrief';
+}
+else {
+    $form_message = '';
+}
+
+$name = '';
+$email = '';
+if ($_GET["pdf"]) {
+    if ($_GET["pdf"] == 'true') {
+        $form_message = "U heeft een e-mail ontvangen met een download link";
+    }
+    elseif ($_GET["pdf"] == 'false') {
+        $name = $_GET["pdf_name"];
+        $email = $_GET["pdf_email"];
+        $form_message = 'Vul alle verplichten velden in a.u.b';
+    }
 }
 else {
     $form_message = '';
@@ -17,6 +33,38 @@ get_header(); ?>
         ?>
     </div>
 
+    <div class="free-pdf-container">
+        <div class="wrapper">
+            <div class="row-fluid">
+                <div class="span12 clearfix">
+                    <?php
+                    if(!isset($_GET["pdf"]) || (isset($_GET["pdf"]) && $_GET["pdf"] == 'false')) { ?>
+                    <h2>Ontvang een gratis activiteit</h2>
+                    <p>Ontvang gratis een mooie activiteit die negatief gevoel omzet in positieve groei bij jouw klanten</p>
+                    <form id="pdf-form" class="clearfix" action="custom_forms.php" method="post">
+                        <p class="float-left-pdf input-block clearfix">
+                            <input placeholder="Uw naam" class="valid name_pdf" type="text" name="pdf_name" value="<?php echo $name; ?>">
+                        </p>
+                        <p class="float-left-pdf input-block clearfix">
+                            <input placeholder="Uw e-mailadres" type="email" class="valid email_pdf" name="pdf_email" value="<?php echo $email; ?>">
+                        </p>
+                        <p class="float-left-pdf clearfix">                    
+                            <input class="pdf_button" name="pdf_submit" type="submit" value="Versturen">
+                        </p>
+                        <div class="clear"></div>                        
+                    </form>
+                    <?php } ?>
+                    <?php 
+                    if (!empty($form_message)) { ?>
+                    <p class="form-message">
+                        <?php echo $form_message; ?>
+                    </p>
+                    <?php } ?>
+                </div>
+            </div>
+         </div>
+    </div>
+
     <div class="wrapper">
 
         <?php if($form_message): ?>
@@ -29,7 +77,7 @@ get_header(); ?>
         <?php endif; ?>
 
         <div class="row-fluid">
-        
+
             <div class="span12 clearfix">
 
                 <?php // print content of front page 
