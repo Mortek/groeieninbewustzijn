@@ -571,6 +571,7 @@ Header
 #logo-image {
     float:left;
     margin-top:35px;
+    margin-left: -30px;
 }
 #logo-image a,
 #logo-image a img {
