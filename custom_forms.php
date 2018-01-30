@@ -79,7 +79,6 @@ Email: $email
 
         mail($to, $subject, $body, $headers);
 
-
         # To visitor
         $headers = "Reply-to: info@intenceopleidingen.nl" . "\r\n";
         $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
@@ -91,27 +90,21 @@ Email: $email
 
         $body = "Hoi $name, <br><br>
 
-<b>De gratis activiteit kun je downloaden door <a target='_blank' href='https://intenceopleidingen.nl/wp-content/uploads/2017/gratis_activiteit.pdf'>hier te klikken</a>.</b> <br><br>
+<b>Ego doorprikkers</b> <br>
+Leuk dat je deze gratis ego doorprikkers hebt aangevraagd. Dat betekent, dat jij zelf de nodige stappen hebt gezet om te groeien in bewustzijn en te openen in Liefde. Waarschijnlijk voel jij nu het verlangen om anderen daarin te begeleiden.<br><br>
 
-<b>Effect van de activiteit</b> <br>
-Deze activiteit gebruik ik ook bij mijn clienten in mijn eigen praktijk en daar behalen we altijd goede resultaten mee. <br><br>
+Deze lijst met ego doorprikkers is een onderdeel van de opleiding Transformatie Coachen.<br>
+De opleiding leidt je op tot een bewustzijnscoach en je begeleidt processen bij jouw klanten om te groeien in bewustzijn en te openen in Liefde.<br><br>
 
-Door (ongewenst) gevoel om te zetten in een positief beeld verschuift de focus van een negatieve ervaring of een negatief gevoel naar een positieve toekomst. In deze activiteit heel concreet verbeeldt in klei. De client neemt het werkstuk mee naar huis en het mag de client daar weer herinneren aan een positieve toekomst. <br><br>
+Het ego doorzien is één van de onderdelen waar je tips en tools voor krijgt, tijdens de opleiding.<br>
+Met deze download heb jij al een hele lijst met vragen/opmerkingen die je kunt maken om de ander bewust te maken van het ego-gedrag. Je vergroot bewustzijn van de werking van het ego en je geeft inzicht hoe je het ego waar kunt nemen, maar niet voor waar hoeft te nemen.<br><br>
 
-Bij kinderen geeft het vaak ook inzicht in de gedachtengang die ze vaak nog lastig kunnen verwoorden. Op die manier geeft het werkstuk hen niet alleen houvast, maar verschaft hij de ouders en mij ook enorm veel waardevolle informatie. <br><br>
+<b>Meer informatie</b><br>
+Mocht je vragen hebben, schroom niet om te bellen of te mailen.<br><br>
 
-<b>Verlatingsangst</b> <br>
-Een meisje van 11 kleide zichzelf, haar zusje en haar moeder. Toen ze klaar <img src='https://intenceopleidingen.nl/wp-content/uploads/2017/pdf_image.png' /> was, maakte ze van de klei één grote pannenkoek. 'Zo die komen nooit meer van elkaar', zei het meisje. Hiermee uitte ze haar scheidingsangst zien. Hier hebben we verder mee gewerkt. <br><br>
+Mocht je interesse gewekt zijn voor de opleiding en wil je nog meer tips en ‘tools’ om bewustzijnscoach te worden? Klik dan op <a href='https://www.intenceopleidingen.nl/opleiding-transformatie-coachen/'>deze link</a>.<br><br>
 
-<b>Meer informatie</b> <br>
-Wanneer je vragen hebt, dan mag dat altijd. Gewoon door dit mailtje te beantwoorden. <br><br>
-
-<b>Verder ontwikkelen</b> <br>
-Wanneer je interesse hebt in deze methodiek en je er meer over wilt weten, dan ben je van harte welkom om <a target='_blank' href='https://www.intenceopleidingen.nl/creatieve-opleidingen/korte-creatieve-therapie-opleiding/'>hier verder te kijken</a>.  <br><br>
-
-Met vriendelijke groet, <br><br>
-
-Margo Riphagen
+Veel succes met jouw egodoorprikkers.
 ";
 
         mail($to, $subject, $body, $headers);

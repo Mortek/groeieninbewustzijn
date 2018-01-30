@@ -68,7 +68,7 @@
                             
                                 <div id="logo-image">
                                     <a href="https://www.intenceopleidingen.nl">
-                                        <img src="/wp-content/themes/nictitate/images/icons/gib-logo.png" />
+                                        <img src="/wp-content/themes/nictitate/images/icons/gib-logo-new.png" />
                                     </a>
                                 </div>
                                 

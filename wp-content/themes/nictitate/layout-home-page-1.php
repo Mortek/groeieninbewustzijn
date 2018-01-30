@@ -39,8 +39,8 @@ get_header(); ?>
                 <div class="span12 clearfix">
                     <?php
                     if(!isset($_GET["pdf"]) || (isset($_GET["pdf"]) && $_GET["pdf"] == 'false')) { ?>
-                    <h2>Ontvang een gratis activiteit</h2>
-                    <p>Ontvang gratis een mooie activiteit die negatief gevoel omzet in positieve groei bij jouw klanten</p>
+                    <h2>Tips en tools om het ego te doorzien</h2>
+                    <p>Gebruik deze tools bij de coaching van jouw klanten</p>
                     <form id="pdf-form" class="clearfix" action="custom_forms.php" method="post">
                         <p class="float-left-pdf input-block clearfix">
                             <input placeholder="Uw naam" class="valid name_pdf" type="text" name="pdf_name" value="<?php echo $name; ?>">
