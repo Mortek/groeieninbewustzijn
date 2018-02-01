@@ -104,7 +104,9 @@ Mocht je vragen hebben, schroom niet om te bellen of te mailen.<br><br>
 
 Mocht je interesse gewekt zijn voor de opleiding en wil je nog meer tips en ‘tools’ om bewustzijnscoach te worden? Klik dan op <a href='https://www.intenceopleidingen.nl/opleiding-transformatie-coachen/'>deze link</a>.<br><br>
 
-Veel succes met jouw egodoorprikkers.
+Veel succes met jouw egodoorprikkers. <br><br>
+
+<b>De gratis activiteit kun je downloaden door <a target='_blank' href='https://intenceopleidingen.nl/wp-content/uploads/ego_door_prikkers.pdf'>hier te klikken</a>.</b>
 ";
 
         mail($to, $subject, $body, $headers);
