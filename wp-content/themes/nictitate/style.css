@@ -796,9 +796,10 @@ Header
     height:25px;
 }
 .cbp-af-header.cbp-af-header-shrink #logo-image a img {
-    width: 49px;
+    width: 40px;
     display: block;
     margin-top: 18px;
+    margin-left: 35px;
 }
 .cbp-af-header.cbp-af-header-shrink #main-menu > li > ul {
     top:50px;
