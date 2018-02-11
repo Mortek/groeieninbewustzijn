@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>              
     <head>
         <meta charset="<?php bloginfo('charset'); ?>" />                   
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="google-site-verification" content="LTJN796-2FYPfnn4OezX0dht2NcOlb1yfVOqs-JU1uA" />
         <title>
             <?php 

@@ -3563,4 +3563,22 @@ div.elements-box > div.timely.ai1ec-single-event > div.ai1ec-event-details.ai1ec
         margin: 25px auto 0px auto;
         width: 320px;
     }
+
+    #sequence li {
+        background-position-x: -73% !important;
+    }
+
+    .kopa-boxed .sticky-header {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 667px) {
+    #sequence li {
+        background-position-x: 100% !important;
+    }
+
+    .kopa-boxed .sticky-header {
+        width: 100%;
+    }
 }
