@@ -48,7 +48,10 @@ get_header(); ?>
                         <p class="float-left-pdf input-block clearfix">
                             <input placeholder="Uw e-mailadres" type="email" class="valid email_pdf" name="pdf_email" value="<?php echo $email; ?>">
                         </p>
-                        <p class="float-left-pdf clearfix">                    
+                        <p class="float-left-pdf input-block clearfix">
+                            <input type="checkbox" class="newsletter-checkbox" name="pdf_newsletter" value="Ja">Meld me aan voor de nieuwsbrief<br>
+                        </p>
+                        <p>                    
                             <input class="pdf_button" name="pdf_submit" type="submit" value="Versturen">
                         </p>
                         <div class="clear"></div>                        

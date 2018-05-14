@@ -3577,8 +3577,8 @@ div.elements-box > div.timely.ai1ec-single-event > div.ai1ec-event-details.ai1ec
     #sequence li {
         background-position-x: 100% !important;
     }
+}
 
-    .kopa-boxed .sticky-header {
-        width: 100%;
-    }
+#pdf-form > p:nth-child(3) > input {
+    margin: 0 5px 0 0;
 }

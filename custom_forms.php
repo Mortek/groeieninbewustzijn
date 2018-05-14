@@ -65,6 +65,12 @@ if(isset($_POST['pdf_submit']))
         # To Margo
         $name = $_POST['pdf_name'];
         $email = $_POST['pdf_email'];
+        $newsletter = $_POST['pdf_newsletter'];
+
+        if ($newsletter !== 'Ja') {
+            $newsletter = 'Nee';
+        }
+        
         $headers = "Reply-to: $email";
 
         $to = 'info@intenceopleidingen.nl';
@@ -75,6 +81,7 @@ if(isset($_POST['pdf_submit']))
 
 Naam: $name 
 Email: $email 
+Nieuwsbrief: $newsletter
 ";
 
         mail($to, $subject, $body, $headers);
