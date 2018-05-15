@@ -121,3 +121,64 @@ Veel succes met jouw egodoorprikkers. <br><br>
         header('Location: https://www.intenceopleidingen.nl/?pdf=true');
     }
 }
+
+
+
+
+
+
+if(isset($_POST['pdf_childcoach_submit'])) 
+{   
+    if (empty($_POST['pdf_childcoach_name']) || empty($_POST['pdf_childcoach_email'])) {
+        header('Location: https://www.intenceopleidingen.nl/creatieve-opleidingen/opleiding-creatieve-kindercoaching/?pdf_childcoach=false&pdf_childcoach_name='.$_POST['pdf_childcoach_name'].'&pdf_childcoach_email='.$_POST['pdf_childcoach_email']);
+    }
+    else {
+        # To Margo
+        $name = $_POST['pdf_childcoach_name'];
+        $email = $_POST['pdf_childcoach_email'];
+        $newsletter = $_POST['pdf_childcoach_newsletter'];
+
+        if ($newsletter !== 'Ja') {
+            $newsletter = 'Nee';
+        }
+        
+        $headers = "Reply-to: $email";
+
+        $to = 'info@intenceopleidingen.nl';
+        $subject = 'Reactie op het gratis activiteiten formulier (kindercoaching)';
+
+
+        $body = "Er is een nieuwe reactie op het gratis activiteiten formulier (kindercoaching):
+
+Naam: $name 
+Email: $email 
+Nieuwsbrief: $newsletter
+";
+
+        mail($to, $subject, $body, $headers);
+
+        # To visitor
+        $headers = "Reply-to: info@intenceopleidingen.nl" . "\r\n";
+        $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $headers .= "From: info@intenceopleidingen.nl" . "\r\n";
+        $to = $_POST['pdf_childcoach_email'];
+
+        $subject = 'Intence opleidingen. Veel plezier met uw gratis activiteit!';
+
+
+        $body = "Hallo $name, <br><br>
+
+Wat leuk dat je aangeeft dat je het helende verhaal voor kinderen van gescheiden ouders wilt hebben.<br>
+Helende verhalen schrijven is een onderdeel van de opleiding tot Creatief Kindercoach. Lijkt het jou ook leuk om dit zelf te leren en kinderen creatief te coachen? Dan is deze opleiding wat voor jou.<br>
+Veel plezier en succes met het verhaal.<br><br>
+
+<b>De gratis activiteit kun je downloaden door <a target='_blank' href='https://intenceopleidingen.nl/wp-content/uploads/het_lieve_heersbeestje.pdf'>hier te klikken</a>.</b><br><br>
+
+Margo Riphagen
+";
+
+        mail($to, $subject, $body, $headers);
+
+        header('Location: https://www.intenceopleidingen.nl/creatieve-opleidingen/opleiding-creatieve-kindercoaching/?pdf_childcoach=true');
+    }
+}

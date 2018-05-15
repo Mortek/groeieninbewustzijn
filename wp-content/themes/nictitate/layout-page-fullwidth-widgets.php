@@ -1,7 +1,22 @@
 <?php 
 $kopa_setting = kopa_get_template_setting();
 $sidebars = $kopa_setting['sidebars'];
-get_header(); ?>
+get_header(); 
+
+if ($_GET["pdf_childcoach"]) {
+    if ($_GET["pdf_childcoach"] == 'true') {
+        $form_message = "U heeft een e-mail ontvangen met een download link";
+    }
+    elseif ($_GET["pdf_childcoach"] == 'false') {
+        $name = $_GET["pdf_childcoach_name"];
+        $email = $_GET["pdf_childcoach_email"];
+        $form_message = 'Vul alle verplichte velden in a.u.b';
+    }
+}
+else {
+    $form_message = '';
+}
+?>
 
 <div id="main-content">
                         
@@ -16,8 +31,8 @@ get_header(); ?>
                     # show form
                     if (!isset($_GET["pdf_childcoach"]) || (isset($_GET["pdf_childcoach"]) && $_GET["pdf_childcoach"] == 'false')) { ?>
                         <h1 style="text-align: center;">Het lieve heersbeestje</h1>
-                        <p style="text-align: center;">Ontvang nu gratis een mooi en helend verhaal.</p>
-                        <form id="pdf-form" class="clearfix" action="custom_forms.php" method="post">
+                        <p style="text-align: center;">Een helend verhaal voor kinderen van gescheiden ouders.</p>
+                        <form id="pdf-form" class="clearfix" action="/custom_forms.php" method="post">
                             <p class="float-left-pdf input-block clearfix">
                                 <input placeholder="Uw naam" class="valid name_pdf" type="text" name="pdf_childcoach_name" value="<?php echo $name; ?>">
                             </p>
@@ -37,9 +52,9 @@ get_header(); ?>
 
                     <?php 
                     if (!empty($form_message)) { ?>
-                    <p class="form-message">
+                    <h1 style="margin-bottom:100px;">
                         <?php echo $form_message; ?>
-                    </p>
+                    </h1>
                     <?php } # end form message
 
                 } # end show form

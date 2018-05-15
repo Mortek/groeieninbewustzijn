@@ -13,7 +13,8 @@ RewriteRule \.xml(\.gz)?$ /wp-content/sitemaps%{REQUEST_URI} [L]
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+#RewriteRule . /index.php [L]
+RewriteRule . /groeieninbewustzijn/index.php [L]
 </IfModule>
 
 # END WordPress

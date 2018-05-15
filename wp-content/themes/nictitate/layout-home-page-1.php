@@ -15,7 +15,7 @@ if ($_GET["pdf"]) {
     elseif ($_GET["pdf"] == 'false') {
         $name = $_GET["pdf_name"];
         $email = $_GET["pdf_email"];
-        $form_message = 'Vul alle verplichten velden in a.u.b';
+        $form_message = 'Vul alle verplichte velden in a.u.b';
     }
 }
 else {
