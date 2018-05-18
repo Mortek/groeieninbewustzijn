@@ -26,21 +26,31 @@ else {
         <div class="row-fluid">
             <div class="span12">
                 <?php 
+                if (!empty($form_message)) { ?>
+                <h1 style="margin-bottom:100px;">
+                    <?php echo $form_message; ?>
+                </h1>
+                <?php } # end form message ?>
+
+                <?php get_template_part( 'contents' ) ?>
+
+                <?php 
                 $request_uri = "$_SERVER[REQUEST_URI]";
                 if (strpos($request_uri, 'creatieve-opleidingen/opleiding-creatieve-kindercoaching')) {
                     # show form
                     if (!isset($_GET["pdf_childcoach"]) || (isset($_GET["pdf_childcoach"]) && $_GET["pdf_childcoach"] == 'false')) { ?>
                         <h1 style="text-align: center;">Het lieve heersbeestje</h1>
                         <p style="text-align: center;">Een helend verhaal voor kinderen van gescheiden ouders.</p>
+                        <p style="text-align: center;">Vul je naam en e-mail in en je krijgt de gratis weggever.</p>
                         <form id="pdf-form" class="clearfix" action="/custom_forms.php" method="post">
+                            <p class="input-block clearfix">
+                                <input style="margin: 0 5px 0 0;" type="checkbox" class="newsletter-checkbox" name="pdf_childcoach_newsletter" value="Ja">Meld me aan voor de nieuwsbrief<br>
+                            </p>
                             <p class="float-left-pdf input-block clearfix">
                                 <input placeholder="Uw naam" class="valid name_pdf" type="text" name="pdf_childcoach_name" value="<?php echo $name; ?>">
                             </p>
                             <p class="float-left-pdf input-block clearfix">
                                 <input placeholder="Uw e-mailadres" type="email" class="valid email_pdf" name="pdf_childcoach_email" value="<?php echo $email; ?>">
-                            </p>
-                            <p class="float-left-pdf input-block clearfix">
-                                <input type="checkbox" class="newsletter-checkbox" name="pdf_childcoach_newsletter" value="Ja">Meld me aan voor de nieuwsbrief<br>
                             </p>
                             <p>                    
                                 <input class="pdf_button" name="pdf_childcoach_submit" type="submit" value="Versturen">
@@ -48,18 +58,9 @@ else {
                             <div class="clear"></div>                        
                         </form>
                         <br><br>
-                    <?php } ?>
-
-                    <?php 
-                    if (!empty($form_message)) { ?>
-                    <h1 style="margin-bottom:100px;">
-                        <?php echo $form_message; ?>
-                    </h1>
-                    <?php } # end form message
-
+                    <?php }
                 } # end show form
                 ?>
-                <?php get_template_part( 'contents' ) ?>
                 
                 <?php if ( is_active_sidebar( $sidebars[0] ) )
                     dynamic_sidebar( $sidebars[0] );
