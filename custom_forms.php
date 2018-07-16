@@ -127,6 +127,77 @@ Veel succes met jouw egodoorprikkers. <br><br>
 
 
 
+if(isset($_POST['pdf_submit_transformation_coaching'])) 
+{   
+    if (empty($_POST['pdf_name']) || empty($_POST['pdf_email'])) {
+        header('Location: https://www.intenceopleidingen.nl/opleiding-transformatie-coachen?pdf=false&pdf_name='.$_POST['pdf_name'].'&pdf_email='.$_POST['pdf_email']);
+    }
+    else {
+        # To Margo
+        $name = $_POST['pdf_name'];
+        $email = $_POST['pdf_email'];
+        $newsletter = $_POST['pdf_newsletter'];
+
+        if ($newsletter !== 'Ja') {
+            $newsletter = 'Nee';
+        }
+        
+        $headers = "Reply-to: $email";
+
+        $to = 'info@intenceopleidingen.nl';
+        $subject = 'Reactie op het gratis activiteiten formulier';
+
+
+        $body = "Er is een nieuwe reactie op het gratis activiteiten formulier:
+
+Naam: $name 
+Email: $email 
+Nieuwsbrief: $newsletter
+";
+
+        mail($to, $subject, $body, $headers);
+
+        # To visitor
+        $headers = "Reply-to: info@intenceopleidingen.nl" . "\r\n";
+        $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $headers .= "From: info@intenceopleidingen.nl" . "\r\n";
+        $to = $_POST['pdf_email'];
+
+        $subject = 'Intence opleidingen. Veel plezier met uw gratis activiteit!';
+
+
+        $body = "Hoi $name, <br><br>
+
+<b>Ego doorprikkers</b> <br>
+Leuk dat je deze gratis ego doorprikkers hebt aangevraagd. Dat betekent, dat jij zelf de nodige stappen hebt gezet om te groeien in bewustzijn en te openen in Liefde. Waarschijnlijk voel jij nu het verlangen om anderen daarin te begeleiden.<br><br>
+
+Deze lijst met ego doorprikkers is een onderdeel van de opleiding Transformatie Coachen.<br>
+De opleiding leidt je op tot een bewustzijnscoach en je begeleidt processen bij jouw klanten om te groeien in bewustzijn en te openen in Liefde.<br><br>
+
+Het ego doorzien is één van de onderdelen waar je tips en tools voor krijgt, tijdens de opleiding.<br>
+Met deze download heb jij al een hele lijst met vragen/opmerkingen die je kunt maken om de ander bewust te maken van het ego-gedrag. Je vergroot bewustzijn van de werking van het ego en je geeft inzicht hoe je het ego waar kunt nemen, maar niet voor waar hoeft te nemen.<br><br>
+
+<b>Meer informatie</b><br>
+Mocht je vragen hebben, schroom niet om te bellen of te mailen.<br><br>
+
+Mocht je interesse gewekt zijn voor de opleiding en wil je nog meer tips en ‘tools’ om bewustzijnscoach te worden? Klik dan op <a href='https://www.intenceopleidingen.nl/opleiding-transformatie-coachen/'>deze link</a>.<br><br>
+
+Veel succes met jouw egodoorprikkers. <br><br>
+
+<b>De gratis activiteit kun je downloaden door <a target='_blank' href='https://intenceopleidingen.nl/wp-content/uploads/ego_door_prikkers.pdf'>hier te klikken</a>.</b>
+";
+
+        mail($to, $subject, $body, $headers);
+
+        header('Location: https://www.intenceopleidingen.nl/opleiding-transformatie-coachen?pdf=true');
+    }
+}
+
+
+
+
+
+
 if(isset($_POST['pdf_childcoach_submit'])) 
 {   
     if (empty($_POST['pdf_childcoach_name']) || empty($_POST['pdf_childcoach_email'])) {

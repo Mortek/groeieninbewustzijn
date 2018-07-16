@@ -3554,7 +3554,7 @@ div.elements-box > div.timely.ai1ec-single-event > div.ai1ec-event-details.ai1ec
     font-size: 15px;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 666px) {
     .float-left-pdf {
         float: none;
     }
@@ -3565,7 +3565,7 @@ div.elements-box > div.timely.ai1ec-single-event > div.ai1ec-event-details.ai1ec
     }
 
     #sequence li {
-        background-position-x: -73% !important;
+        background-position-x: -50% !important;
     }
 
     .kopa-boxed .sticky-header {
@@ -3575,7 +3575,7 @@ div.elements-box > div.timely.ai1ec-single-event > div.ai1ec-event-details.ai1ec
 
 @media only screen and (min-width: 667px) {
     #sequence li {
-        background-position-x: 100% !important;
+        background-position-x: 97% !important;
     }
 }
 

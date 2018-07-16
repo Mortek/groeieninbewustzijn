@@ -2998,7 +2998,7 @@ class Kopa_Widget_Sequence_Slider extends WP_Widget {
                             $slider_background_image = get_post_meta( get_the_ID(), 'slider_background_image', true );
                         } 
                     ?>
-                        <li id="<?php echo $this->get_field_id( 'sequence_slider-item' ) . '-' . get_the_ID(); ?>" style="background: url(<?php echo $slider_background_image; ?>);background-position-x: 85%;">
+                        <li id="<?php echo $this->get_field_id( 'sequence_slider-item' ) . '-' . get_the_ID(); ?>" style="background: url(<?php echo $slider_background_image; ?>);">
                             <div class="title-2"><h2><?php the_title(); ?></h2></div>
                             <div class="subtitle-2 animate-in">
                                 <?php the_excerpt(); ?>
