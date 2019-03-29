@@ -4,16 +4,16 @@ $sidebars = $kopa_setting['sidebars'];
 get_header(); 
 
 if ($_GET["pdf_childcoach"]) {
-    if ($_GET["pdf_childcoach"] == 'true') {
+    if ($_GET["pdf_childcoach"] == true) {
         $form_message = "U heeft een e-mail ontvangen met een download link";
     }
-    elseif ($_GET["pdf_childcoach"] == 'false') {
+    elseif ($_GET["pdf_childcoach"] == false) {
         $name = $_GET["pdf_childcoach_name"];
         $email = $_GET["pdf_childcoach_email"];
         $form_message = 'Vul alle verplichte velden in a.u.b';
     }
 }
-else {
+elseif (!empty($form_message)) {
     $form_message = '';
 }
 ?>
@@ -22,23 +22,23 @@ else {
 if ($_GET["newsletter"]) {
     $form_message = 'Bedankt voor het inschrijven op de nieuwsbrief';
 }
-else {
+elseif (empty($form_message)) {
     $form_message = '';
 }
 
 $name = '';
 $email = '';
 if ($_GET["pdf"]) {
-    if ($_GET["pdf"] == 'true') {
+    if ($_GET["pdf"] == true) {
         $form_message = "U heeft een e-mail ontvangen met een download link";
     }
-    elseif ($_GET["pdf"] == 'false') {
+    elseif ($_GET["pdf"] == false) {
         $name = $_GET["pdf_name"];
         $email = $_GET["pdf_email"];
         $form_message = 'Vul alle verplichte velden in a.u.b';
     }
 }
-else {
+elseif (empty($form_message)) {
     $form_message = '';
 }
 ?>
@@ -68,14 +68,14 @@ else {
                         <p style="text-align: center;">Een helend verhaal voor kinderen van gescheiden ouders.</p>
                         <p style="text-align: center;">Vul je naam en e-mail in en je krijgt de gratis weggever.</p>
                         <form id="pdf-form" class="clearfix" action="/custom_forms.php" method="post">
-                            <p class="input-block clearfix">
-                                <input style="margin: 0 5px 0 0;" type="checkbox" class="newsletter-checkbox" name="pdf_childcoach_newsletter" value="Ja">Meld me aan voor de nieuwsbrief<br>
+                            <p class="float-left-pdf input-block clearfix">
+                                <input placeholder="Uw naam *" class="valid name_pdf" type="text" name="pdf_childcoach_name" value="<?php echo $name; ?>" required>
                             </p>
                             <p class="float-left-pdf input-block clearfix">
-                                <input placeholder="Uw naam" class="valid name_pdf" type="text" name="pdf_childcoach_name" value="<?php echo $name; ?>">
+                                <input placeholder="Uw e-mailadres *" type="email" class="valid email_pdf" name="pdf_childcoach_email" value="<?php echo $email; ?>" required>
                             </p>
                             <p class="float-left-pdf input-block clearfix">
-                                <input placeholder="Uw e-mailadres" type="email" class="valid email_pdf" name="pdf_childcoach_email" value="<?php echo $email; ?>">
+                                <i>* Ik ontvang graag de gratis weggever en daarbij meld ik mij automatisch aan voor de nieuwsbrief</i>
                             </p>
                             <p>                    
                                 <input class="pdf_button" name="pdf_childcoach_submit" type="submit" value="Versturen">
@@ -101,13 +101,13 @@ else {
                                         <p>Gebruik deze tools bij de coaching van jouw klanten</p>
                                         <form id="pdf-form" class="clearfix" action="/custom_forms.php" method="post">
                                             <p class="float-left-pdf input-block clearfix">
-                                                <input placeholder="Uw naam" class="valid name_pdf" type="text" name="pdf_name" value="<?php echo $name; ?>">
+                                                <input placeholder="Uw naam *" class="valid name_pdf" type="text" name="pdf_name" value="<?php echo $name; ?>" required>
                                             </p>
                                             <p class="float-left-pdf input-block clearfix">
-                                                <input placeholder="Uw e-mailadres" type="email" class="valid email_pdf" name="pdf_email" value="<?php echo $email; ?>">
+                                                <input placeholder="Uw e-mailadres *" type="email" class="valid email_pdf" name="pdf_email" value="<?php echo $email; ?>" required>
                                             </p>
                                             <p class="float-left-pdf input-block clearfix">
-                                                <input type="checkbox" class="newsletter-checkbox" name="pdf_newsletter" value="Ja">Meld me aan voor de nieuwsbrief<br>
+                                                <i>* Door de tips en tools te downloaden meld ik mij automatisch aan voor de nieuwsbrief</i>
                                             </p>
                                             <p>                    
                                                 <input class="pdf_button" name="pdf_submit_transformation_coaching" type="submit" value="Versturen">

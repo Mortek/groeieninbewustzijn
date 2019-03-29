@@ -136,11 +136,7 @@ if(isset($_POST['pdf_submit_transformation_coaching']))
         # To Margo
         $name = $_POST['pdf_name'];
         $email = $_POST['pdf_email'];
-        $newsletter = $_POST['pdf_newsletter'];
-
-        if ($newsletter !== 'Ja') {
-            $newsletter = 'Nee';
-        }
+        $newsletter = 'Ja';
         
         $headers = "Reply-to: $email";
 
@@ -207,11 +203,7 @@ if(isset($_POST['pdf_childcoach_submit']))
         # To Margo
         $name = $_POST['pdf_childcoach_name'];
         $email = $_POST['pdf_childcoach_email'];
-        $newsletter = $_POST['pdf_childcoach_newsletter'];
-
-        if ($newsletter !== 'Ja') {
-            $newsletter = 'Nee';
-        }
+        $newsletter = 'Ja';
         
         $headers = "Reply-to: $email";
 
