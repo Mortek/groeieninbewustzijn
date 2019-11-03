@@ -94,7 +94,7 @@ else {
                             <h2 class="contact-title">Contact informatie<span></span></h2>
                             <div class="acc-wrapper">
                                 <div class="accordion-title active">
-                                    <h3><a href="#">Locatie en contact</a></h3>
+                                    <h3>Locatie en contact</h3>
                                     <span>+</span>
                                 </div>
                                 <div class="accordion-container" style="display: block;">
@@ -106,7 +106,7 @@ else {
                                         <i></i><span>Dordrecht</span> <br/>
                                         <i></i><span>Nederland</span></p>
 
-                                        <p><i class="fa fa-phone"></i><span><?php echo $phone_number; ?></span></p>
+                                        <p><i class="fa fa-phone"></i><span><a href="tel:<?php echo $phone_number; ?>"><?php echo $phone_number; ?></a></span></p>
                                         <p><i class="fa fa-envelope"></i><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
                                     </address>
                                 </div> <!-- .acc-wrapper -->

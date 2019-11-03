@@ -2705,7 +2705,7 @@ class Kopa_Widget_Contact_Form extends WP_Widget {
                         </ul><!--contact-social-link-->
                         <address>
                             <p><i class="fa fa-map-marker"></i><span><?php echo $address; ?></span></p>
-                            <p><i class="fa fa-phone"></i><span><?php echo $phone_number; ?></span></p>
+                            <p><i class="fa fa-phone"></i><span><a href="tel:<?php echo $phone_number; ?>"><?php echo $phone_number; ?></a></span></p>
                             <p><i class="fa fa-envelope"></i><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
                         </address>
                     </div><!--contact-info-->
