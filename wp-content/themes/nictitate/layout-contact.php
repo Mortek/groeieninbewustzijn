@@ -95,7 +95,6 @@ else {
                             <div class="acc-wrapper">
                                 <div class="accordion-title active">
                                     <h3>Locatie en contact</h3>
-                                    <span>+</span>
                                 </div>
                                 <div class="accordion-container" style="display: block;">
                                     <address>
