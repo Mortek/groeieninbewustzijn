@@ -203,7 +203,7 @@ function kopa_front_enqueue_scripts() {
         wp_enqueue_style('kopa-prettyPhoto', $dir . '/css/prettyPhoto.css', array(), NULL, 'screen');
         wp_enqueue_style('kopa-flexlisder', $dir . '/css/flexslider.css', array(), NULL, 'screen');
         wp_enqueue_style('kopa-sequence-style', $dir . '/css/sequencejs-theme.modern-slide-in.css', array(), NULL, 'screen');
-        wp_enqueue_style('kopa-style', get_stylesheet_uri(), array(), NULL);
+        wp_enqueue_style('kopa-style', get_stylesheet_uri(), array(), '1'); // kopa-style-css or /wp-content/themes/nictitate/style.css
         wp_enqueue_style('kopa-bootstrap-responsive', $dir . '/css/bootstrap-responsive.css', array(), NULL);
         wp_enqueue_style('kopa-extra-style', $dir . '/css/extra.css', array(), NULL);
         wp_enqueue_style('kopa-responsive', $dir . '/css/responsive.css', array(), NULL);

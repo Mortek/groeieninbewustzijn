@@ -705,7 +705,7 @@ Header
     top:40px;
     right:0;
     z-index:99999;
-    width:220px;
+    width:260px;
 }
 #toggle-view-menu > li {
     margin: 0;
@@ -745,7 +745,7 @@ Header
 }
 #toggle-view-menu li.active span,
 #toggle-view-menu li.active h3 a {
-    color:#fff;
+    color:#000;
 }
 #toggle-view-menu .menu-panel {
     margin: 0px;
@@ -760,16 +760,16 @@ Header
     margin:0;
 }
 #toggle-view-menu li .menu-panel ul li {
-    border:none;
-    list-style:disc inside;
+    border-bottom: 1px solid gray;
     margin: 0 0 10px 0;
-    color:#fff;
+    list-style: none;
+    color: #000;
 }
 #toggle-view-menu .menu-panel ul li a {
     display:inline-block;
     *display:inline;
     zoom:1;
-    color:#fff;
+    color:#000;
     font-size:12px;
 }
 #toggle-view-menu .menu-panel ul li ul {
