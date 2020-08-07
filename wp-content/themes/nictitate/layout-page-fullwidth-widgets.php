@@ -109,6 +109,7 @@ elseif (empty($form_message)) {
                                             <p class="float-left-pdf input-block clearfix">
                                                 <i>* Door de tips en tools te downloaden meld ik mij automatisch aan voor de nieuwsbrief</i>
                                             </p>
+                                            <p class="antispam"><input type="text" name="url" /></p>
                                             <p>                    
                                                 <input class="pdf_button" name="pdf_submit_transformation_coaching" type="submit" value="Versturen">
                                             </p>
