@@ -71,6 +71,7 @@ else {
                                     <label class="required" for="contact_message"><?php _e('Bericht', kopa_get_domain()); ?> <span><?php _e(' *', kopa_get_domain()); ?></span>:</label>
                                     <textarea rows="6" cols="80" id="contact_message" name="message"></textarea>
                                 </p>                            
+                                <p class="antispam"><input type="text" name="url" /></p>
                                 <p class="contact-button clearfix">                    
                                     <input name="contact_submit" type="submit" id="submit-contact" value="<?php _e( 'Versturen', kopa_get_domain() ); ?>">
                                 </p>
@@ -100,10 +101,9 @@ else {
                                     <address>
                                     
                                         <p><i class="fa fa-book"></i><span>KvKnr: 50581139</span></p>
-                                        <p><i class="fa fa-map-marker"></i><span>Fuutstraat 22</span></p>
-                                        <p class="address-block"><i></i><span>3312 RJ</span> <br/>
+                                        <p><i class="fa fa-map-marker"></i><span>Oranjepark 4</span></p>
+                                        <p class="address-block"><i></i><span>3311 LR</span> <br/>
                                         <i></i><span>Dordrecht</span> <br/>
-                                        <i></i><span>Nederland</span></p>
 
                                         <p><i class="fa fa-phone"></i><span><a href="tel:<?php echo $phone_number; ?>"><?php echo $phone_number; ?></a></span></p>
                                         <p><i class="fa fa-envelope"></i><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>

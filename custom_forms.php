@@ -25,21 +25,23 @@ if(isset($_POST['contact_submit']))
         //$form_message = 'Vul alle verplichten velden in a.u.b.';
     }
     else {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-        $headers = "Reply-to: $email";
+        // if the url field is empty 
+        if(isset($_POST['url']) && $_POST['url'] == '') {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
+            $headers = "Reply-to: $email";
 
-        $to = 'info@intenceopleidingen.nl';
+            $to = 'info@intenceopleidingen.nl';
 
-        if ($_POST['subject']) {
-            $subject = $_POST['subject'];
-        }
-        else {
-            $subject = 'Reactie op het contactformulier';
-        }
+            if ($_POST['subject']) {
+                $subject = $_POST['subject'];
+            }
+            else {
+                $subject = 'Reactie op het contactformulier';
+            }
 
-        $body = "Er is een nieuwe reactie op het contactformulier:
+            $body = "Er is een nieuwe reactie op het contactformulier:
 
 Naam: $name 
 Onderwerp: $subject 
@@ -48,10 +50,11 @@ Bericht:
 $message
 ";
 
-        $form_message = 'Bedankt voor uw bericht. Ik zal zo spoedig mogelijk contact met u opnemen.';
+            $form_message = 'Bedankt voor uw bericht. Ik zal zo spoedig mogelijk contact met u opnemen.';
 
-        mail($to, $subject, $body, $headers);
-        header('Location: https://www.intenceopleidingen.nl/contact?submitted=true');
+            mail($to, $subject, $body, $headers);
+            header('Location: https://www.intenceopleidingen.nl/contact?submitted=true');
+        }
     }
     
 }
